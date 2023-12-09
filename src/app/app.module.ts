@@ -13,6 +13,7 @@ import {FormsModule} from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms'; // Import ReactiveFormsModule
 import {MatDialogModule} from '@angular/material/dialog';
 import { PopupComponent } from './popup/popup.component'; 
+import {MatTableModule} from '@angular/material/table';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { PopupComponent } from './popup/popup.component';
     MatFormFieldModule,
     FormsModule,
     ReactiveFormsModule,
-    MatDialogModule
+    MatDialogModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]

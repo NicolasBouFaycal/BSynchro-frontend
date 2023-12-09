@@ -10,4 +10,40 @@
     </mat-form-field><br>
     <button mat-raised-button (click)="addAccount()" [disabled]="newAccount.invalid"   color="primary">Submit</button>
 </form>
+
+
   
+<h1>User Information </h1>
+<form class="example-form" [formGroup]="userInfo">
+    <mat-form-field class="example-full-width">
+      <mat-label>Customer Id</mat-label>
+      <input matInput placeholder="customer Id" formControlName="customerId">
+    </mat-form-field>
+    <button mat-raised-button (click)="getUserInfo()" [disabled]="userInfo.invalid"   color="primary">Submit</button>
+    <label>{{firstName}} </label>
+    <label>{{surName}} </label>
+    <label>{{balance}} </label>
+</form>
+
+
+
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+  <ng-container matColumnDef="accountID">
+    <th mat-header-cell *matHeaderCellDef> accountID </th>
+    <td mat-cell *matCellDef="let element"> {{element.accountID}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="amount">
+    <th mat-header-cell *matHeaderCellDef> amount </th>
+    <td mat-cell *matCellDef="let element"> {{element.amount}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="timestamp">
+    <th mat-header-cell *matHeaderCellDef> timestamp </th>
+    <td mat-cell *matCellDef="let element"> {{element.timestamp}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
