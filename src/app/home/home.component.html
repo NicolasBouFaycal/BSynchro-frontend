@@ -8,6 +8,6 @@
         <mat-label>Initial Credit</mat-label>
         <input matInput placeholder="initial credit" formControlName="initialCredit">
     </mat-form-field><br>
-    <button mat-raised-button (click)="openDialog()"  color="primary">Submit</button>
+    <button mat-raised-button (click)="addAccount()" [disabled]="newAccount.invalid"   color="primary">Submit</button>
 </form>
   
