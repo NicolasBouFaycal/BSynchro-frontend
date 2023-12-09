@@ -1,0 +1,13 @@
+<h1>Create New Account </h1>
+<form class="example-form" [formGroup]="newAccount">
+    <mat-form-field class="example-full-width">
+      <mat-label>Customer Id</mat-label>
+      <input matInput placeholder="customer Id" formControlName="customerId">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+        <mat-label>Initial Credit</mat-label>
+        <input matInput placeholder="initial credit" formControlName="initialCredit">
+    </mat-form-field><br>
+    <button mat-raised-button (click)="openDialog()"  color="primary">Submit</button>
+</form>
+  
